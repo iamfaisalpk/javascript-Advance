@@ -1,9 +1,7 @@
-// illeging shadowing
-// let b = 100;
-// {
-//     var b =10;
-// }
-let a = 100;
-{
-    var b =10;
+function example() {
+    let x = 10; // Block-scoped variable
+
+    if (true) {
+        var x = 20; // Error: Identifier 'x' has already been declared
+    }
 }
