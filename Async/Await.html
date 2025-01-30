@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Await</title>
+</head>
+<body>
+    
+    <h1>Async/Await</h1>
+    <script src="Async/Await.js"></script>
+
+    <script>
+        const genarator = async (url)=> {
+            try {
+        const response = await  fetch(url);
+    const data = await response.json();
+    return [data,null];
+    } catch (error) {
+        return [null,error];
+    }
+        };
+
+const fetch1 = async ()=>{
+        const [data,error] = await genarator("https://jsonplaceholder.typicode.com/todos/1")
+    if(data){
+        console.log(data);
+
+        return;
+    }
+    console.log(error);
+    
+            // .then((response) => response.json())
+            // .then((json) => console.log(json));
+
+}
+
+fetch1();
+    </script>
+</body>
+</html>
