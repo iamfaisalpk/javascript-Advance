@@ -11,31 +11,17 @@
     <script src="Async/Await.js"></script>
 
     <script>
-        const genarator = async (url)=> {
-            try {
-        const response = await  fetch(url);
-    const data = await response.json();
-    return [data,null];
-    } catch (error) {
-        return [null,error];
-    }
-        };
-
-const fetch1 = async ()=>{
-        const [data,error] = await genarator("https://jsonplaceholder.typicode.com/todos/1")
-    if(data){
+    const genrator = async ()=>{
+        try{
+            const responce = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+        const data =await responce.json();
         console.log(data);
-
-        return;
+        } catch(error){
+            console.log(error)
+        }
     }
-    console.log(error);
-    
-            // .then((response) => response.json())
-            // .then((json) => console.log(json));
 
-}
-
-fetch1();
+    genrator()
     </script>
 </body>
 </html>

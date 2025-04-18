@@ -1,14 +1,14 @@
 function call(name){
-    console.log("yuor raelly "+ name);
+    console.log("your really be my..but im afraid to tell you "+ name)
 }
 
 function back(callback){
-    let name = "F&J";
+    let name = "you";
 
-    callback(name);
+    callback(name)
 }
 
-back(call);
+back(call)
 
 // callback hell
 

@@ -19,17 +19,17 @@ const promise1 = new Promise((res,rej)=>{
 
 // fetch
 
-            // Arrow function
+            /* Arrow function */
 
             
-// const  fetch = async () =>{
-//     const Response = await promise1;
-//         console.log(Response)
-//     };
+const  fetch = async () =>{
+    const Response = await promise1;
+        console.log(Response)
+    };
     
-//     fetch();
+    fetch();
 
-//  Async/Await one methode
+//  Async/Await one method
 
 // const fetch = async ()=>{
 //     const response = await promise1.catch((err)=>{

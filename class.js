@@ -2,9 +2,7 @@
 // class
 
 class Student{
-    name;
-    YOB;
-    place;
+    
     constructor(name,YOB,place){
         this.name =name;
         this.YOB = YOB;
